@@ -19,7 +19,7 @@
         }
     </style>
 </head>
-<body>s
+<body>
     <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-custom">
