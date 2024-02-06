@@ -19,22 +19,26 @@
         }
     </style>
 </head>
-<body>
-    <div class="container text-center">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <a class="btn btn-outline-primary my-2 my-sm-0" href="/contact">Contactpagina</a>
-                </form>
-            </div>
-        </nav>
+<body>s
+    <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-custom">
+        <a class="navbar-brand" href="#">Webshop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <!--Zorgt voor de wit space-->
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <a class="btn btn-contact my-2 my-sm-0" href="/contact">Contactpagina</a>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container text-center">
         <h1>Welkom bij onze webshop</h1>
         <p>Binnenkort komt hier een nieuwe website met een webshop!</p>
         <img src="{{asset('Logo.png')}}">
