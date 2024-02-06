@@ -17,6 +17,10 @@ Route::get('/index', function () {
     return view('index');
 });
 
+Route::get('/understructure', function () {
+    return view('understructure');
+});
+
 Route::view('/', 'welcome');
 
 Route::view('dashboard', 'dashboard')
