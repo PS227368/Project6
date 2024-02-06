@@ -21,6 +21,10 @@ Route::get('/understructure', function () {
     return view('understructure');
 });
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
 Route::view('/', 'welcome');
 
 Route::view('dashboard', 'dashboard')
