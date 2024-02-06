@@ -13,15 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/index', function () {
     return view('index');
 });
-
-// Voorbeeld van een route naar een controlleractie
-Route::get('/about', 'App\Http\Controllers\AboutController@index');
-
-// Voorbeeld van een route met een parameter
-Route::get('/posts/{id}', 'App\Http\Controllers\PostController@show');
 
 Route::view('/', 'welcome');
 
