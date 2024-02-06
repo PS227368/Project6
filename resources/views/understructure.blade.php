@@ -23,7 +23,8 @@
     <div class="container text-center">
         <h1>Welkom bij onze webshop</h1>
         <p>Binnenkort komt hier een nieuwe website met een webshop!</p>
-        <img src="/afb/KUINlogo.png" alt="Logo" class="img-fluid">
+        <img src="Logo.png" alt="test" class="img-fluid">
+
         <h2>Adresgegevens van onze vestiging:</h2>  
         <ul>
             <li>Vestiging 1 - Adres 1, Tel: 123456789</li>
