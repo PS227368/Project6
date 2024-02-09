@@ -1,0 +1,15 @@
+ body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .navbar-logo {
+        max-height: 80px; /* Aanpassen aan de gewenste hoogte */
+        max-width: 200px; /* Aanpassen aan de gewenste breedte */
+        }
+        #map {
+        width: 400px;
+        height: 400px; /* Hoogte van de kaart container */
+    }

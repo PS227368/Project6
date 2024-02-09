@@ -7,27 +7,19 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Voeg eventuele andere aangepaste stijlen hier toe -->
-    <style>
-        /* Voeg eventuele aangepaste stijlen hier toe */
-        /* Dit is een voorbeeld van hoe je de body kunt centreren met flexbox */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="understructe.css">
 </head>
 <body>
     <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-custom">
-        <a class="navbar-brand" href="#">Webshop</a>
+        <a class="navbar-brand p-0" href="#">
+            <img src="{{ asset('LogoNoText.PNG') }}" alt="Logo" class="navbar-logo">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+    
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <!--Zorgt voor de wit space-->
@@ -36,16 +28,17 @@
                 <a class="btn btn-contact my-2 my-sm-0" href="/contact">Contactpagina</a>
             </form>
         </div>
-    </nav>
+    </nav>    
 
     <div class="container text-center">
         <h1>Welkom bij onze webshop</h1>
         <p>Binnenkort komt hier een nieuwe website met een webshop!</p>
-        <img src="{{asset('Logo.png')}}">
+        <img src="{{asset('banner.jpg')}}" class="w-50 h-50">
 
         <h2>Adresgegevens van onze vestiging:</h2>  
         <ul>
-            <li>Vestiging 1 - Adres 1, Tel: 123456789</li>
+            <li>Best - bosweg 34, 5423AP - Tel: 06-20252619</li>
+            <li>Veldhoven - topstraat 42, 0420 AH - Tel: 06-78789465 </li>
         </ul>
     </div>
     
