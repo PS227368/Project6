@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laravel Product Example</title>
 
+    <link rel="stylesheet" href="index.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Voeg eventuele andere aangepaste stijlen hier toe -->
     <style>
@@ -26,7 +27,9 @@
 <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-custom">
-    <a class="navbar-brand" href="#">Webshop</a>
+    <a class="navbar-brand p-0" href="/understructure">
+        <img src="{{ asset('LogoNoText.PNG') }}" alt="Logo" class="navbar-logo">
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -35,12 +38,12 @@
         <ul class="navbar-nav mr-auto">
             <!--Zorgt voor de wit space-->
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+    <form class="form-inline my-2 my-lg-0">
             <a class="btn btn-contact my-2 my-sm-0" href="/contact">Contactpagina</a>
         </form>
     </div>
 </nav>
-    <h1 style="margin-top: 3.5rem; text-align: center;">Alle producten</h1>
+    <h1 style="margin-top: 5.5rem; text-align: center;">Alle producten</h1>
 
     <!-- Filter Form -->
     <form style="text-align: center;" action="{{ url('/index') }}" method="GET">
