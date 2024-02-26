@@ -1,12 +1,16 @@
 <?php
 
-// database/seeders/ProductSeeder.php
+namespace Database\Seeders;
 
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 class ProductSeeder extends Seeder
 {
+    /**
+     * Run the database seeds.
+     */
     public function run()
     {
         // Define sample data for products
@@ -39,6 +43,7 @@ class ProductSeeder extends Seeder
         ];
 
         // Insert data into the 'products' table
+        
         DB::table('products')->insert($products);
     }
 }
