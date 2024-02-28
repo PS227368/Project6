@@ -16,6 +16,11 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/index', [ProductController::class, 'index']);
 
+Route::get('/home', function () {
+    return view('homepagina');
+});
+
+
 Route::get('/understructure', function () {
     return view('understructure');
 });
