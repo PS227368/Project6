@@ -1,0 +1,14 @@
+.container-wrapper {
+    display: flex;
+    justify-content: space-between; /* Verdeelt de ruimte tussen de containers */
+}
+
+.container {
+    width: 45%; /* Breedte van de container */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centreert de knop horizontaal */
+    margin-top: 20px; /* Ruimte boven de knop */
+}

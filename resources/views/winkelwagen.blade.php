@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laravel Product Page</title>
+    <title>Laravel Store Page</title>
 
     <!-- Add Tailwind CSS link -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="winkelwagen.css">
 
 </head>
 <body class="bg-gray-100">
@@ -40,6 +40,44 @@
     </nav>
 
     <h1 class="text-4xl font-bold text-center mt-12 mb-8">Welkom bij je winkelwagen</h1>
-
+    
+    <h2>Vul hieronder je gegevens in</h2>
+    <div class="container-wrapper">
+        <div class="container mt-10">
+            <form>
+                <div class="form-group">
+                    <label for="naam">Naam:</label>
+                    <input type="text" class="form-control" id="naam" placeholder="Voer uw naam in">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Voer uw e-mailadres in">
+                </div>
+                <div class="form-group">
+                    <label for="bericht">Bericht:</label>
+                    <textarea class="form-control" id="bericht"  placeholder="Voer uw bericht in"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="container mt-10">
+            <form>
+                <div class="form-group">
+                    <label for="naam">Naam:</label>
+                    <input type="text" class="form-control" id="naam" placeholder="Voer uw naam in">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Voer uw e-mailadres in">
+                </div>
+                <div class="form-group">
+                    <label for="bericht">Bericht:</label>
+                    <textarea class="form-control" id="bericht"  placeholder="Voer uw bericht in"></textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="button-container">
+        <button type="submit" class="btn btn-primary">Afrekenen</button>
+    </div>
 </body>
 </html>
