@@ -33,18 +33,12 @@
         <h1 class="text-4xl font-bold mb-8">Welkom bij onze webshop</h1>
         <p class="text-lg text-gray-600 mb-8">Binnenkort komt hier een nieuwe website met een webshop!</p>
         <img src="banner.jpg" alt="Banner" class="w-96 mx-auto mb-8">
-
+    
         <h2 class="text-3xl font-bold mb-4">Adresgegevens van onze vestiging:</h2>
-        <ul class="text-left mb-8">
+        <ul class="text-center mb-8">
             <li class="text-gray-500">Best - bosweg 34, 5423AP - Tel: 06-20252619</li>
             <li class="text-gray-500">Veldhoven - topstraat 42, 0420 AH - Tel: 06-78789465</li>
         </ul>
-        
-        
-        
-        
     </div>
-
 </body>
-
 </html>
