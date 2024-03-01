@@ -18,6 +18,6 @@ class ProductController extends Controller
 
         $products = $query->take(5)->get();
 
-        return view('home', compact('products'));
+        return view('index', compact('products'));
     }
 }
