@@ -40,9 +40,17 @@
     </nav>
 
     <h1 class="text-4xl font-bold text-center mt-12 mb-8">Welkom bij je winkelwagen</h1>
-    
-    <h2>Vul hieronder je gegevens in</h2>
-    <div class="container-wrapper">
+
+
+    <div class="mid-container">
+        <h1>test</h1>
+    </div>
+
+
+    <div class="mid-container">
+        <h2>Vul hieronder je gegevens in:</h2>
+    </div>
+    <div>
         <div class="container mt-10">
             <form>
                 <div class="form-group">
@@ -54,30 +62,26 @@
                     <input type="email" class="form-control" id="email" placeholder="Voer uw e-mailadres in">
                 </div>
                 <div class="form-group">
-                    <label for="bericht">Bericht:</label>
-                    <textarea class="form-control" id="bericht"  placeholder="Voer uw bericht in"></textarea>
-                </div>
-            </form>
-        </div>
-        <div class="container mt-10">
-            <form>
-                <div class="form-group">
-                    <label for="naam">Naam:</label>
-                    <input type="text" class="form-control" id="naam" placeholder="Voer uw naam in">
+                    <label for="adres">Adres:</label>
+                    <input type="text" class="form-control" id="adres" placeholder="Voer uw adres in">
                 </div>
                 <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Voer uw e-mailadres in">
+                    <label for="postcode">Postcode:</label>
+                    <input type="text" class="form-control" id="postcode" placeholder="Voer uw postcode in">
                 </div>
                 <div class="form-group">
-                    <label for="bericht">Bericht:</label>
-                    <textarea class="form-control" id="bericht"  placeholder="Voer uw bericht in"></textarea>
+                    <label for="woonplaats">Woonplaats:</label>
+                    <input type="text" class="form-control" id="woonplaats" placeholder="Voer uw woonplaats in">
+                </div>
+                <div class="form-group">
+                    <label for="land">Land:</label>
+                    <input type="text" class="form-control" id="land" placeholder="Voer uw land in">
                 </div>
             </form>
         </div>
     </div>
-    <div class="button-container">
-        <button type="submit" class="btn btn-primary">Afrekenen</button>
+    <div class="mid-container">
+        <button type="submit" class="btn btn-primary" id="btn">Afrekenen</button>
     </div>
 </body>
 </html>
