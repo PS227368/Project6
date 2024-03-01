@@ -43,7 +43,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             <div class="bg-white rounded-lg shadow-lg p-8">
-                <h2 class="text-2xl font-bold mb-4">Aanbevolen producten</h2>
+                <h2 class="text-2xl font-bold mb-4">Nieuwste producten</h2>
                 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <!-- Producten kunnen hier worden toegevoegd -->
             </div>
