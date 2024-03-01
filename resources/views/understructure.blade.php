@@ -25,6 +25,7 @@
             <div class="hidden md:flex items-center space-x-4">
                 <a href="/index" class="btn btn-contact">Productpagina</a>
                 <a href="/contact" class="btn btn-contact">Contactpagina</a>
+                <a href="/store" class="btn btn-contact">Winkelwagen</a>
             </div>
         </div>
     </nav>

@@ -1,0 +1,20 @@
+
+.container {
+    width: 45%; /* Breedte van de container */
+}
+
+.mid-container {
+    display: flex;
+    justify-content: center; /* Centreert de knop horizontaal */
+    margin-top: 20px; /* Ruimte boven de knop */
+}
+
+#btn{
+    background-color: green; /* Verandert de achtergrondkleur naar groen */
+    border-color: green; /* Verandert de kleur van de rand naar groen */
+}
+
+#btn:hover {
+    background-color: darkgreen; /* Verandert de achtergrondkleur naar donkergroen bij hover */
+    border-color: darkgreen; /* Verandert de kleur van de rand naar donkergroen bij hover */
+}
