@@ -24,8 +24,9 @@
                 <!--Zorgt voor de wit space-->
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <a class="btn btn-contact my-2 my-sm-0" href="/index">Productpagina</a>
                 <a class="btn btn-contact my-2 my-sm-0" href="/understructure">Home</a>
+                <a class="btn btn-contact my-2 my-sm-0" href="/index">Productpagina</a>
+                <a class="btn btn-contact my-2 my-sm-0" href="/store">Winkelwagen</a>
             </form>
         </div>
     </nav>

@@ -33,52 +33,13 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <a class="btn btn-contact my-2 my-sm-0" href="/understructure">Home</a>
+                <a class="btn btn-contact my-2 my-sm-0" href="/index">Productpagina</a>
                 <a class="btn btn-contact my-2 my-sm-0" href="/contact">Contactpagina</a>
-                <a class="btn btn-contact my-2 my-sm-0" href="/store">Winkelwagen</a>
             </form>
         </div>
     </nav>
 
-    <h1 class="text-4xl font-bold text-center mt-12 mb-8">Welkom op onze productpagina</h1>
-
-
-
-    <!-- Product Grid -->
-    <div class="container mx-auto px-4">
-        <!-- Filter Form -->
-        <form class="filter-form mt-8 mb-12" action="{{ url('/index') }}" method="GET">
-            <label for="name" class="mr-2">Filter by Name:</label>
-            <input type="text" name="name" id="name" value="{{ request('name') }}" class="border rounded py-2 px-4">
-            <button type="submit" class="btn btn-primary ml-2">Filter</button>
-        </form>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            @foreach($products as $product)
-                <div class="product-item bg-white rounded-lg shadow-lg p-4">
-                    <img src="{{ $product->image }}" alt="{{ $product->name }}" class="img-fluid">
-                    <h3 class="text-xl font-bold my-2">{{ $product->name }}</h3>
-                    <p class="mb-2">{{ $product->description }}</p>
-                    <p class="price">{{ $product->price }}</p>
-                </div>
-            @endforeach
-        </div>
-    </div>
-
-    <!-- JavaScript voor Slick Slider -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.product-slider').slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                arrows: true,
-                dots: true
-            });
-        });
-    </script>
+    <h1 class="text-4xl font-bold text-center mt-12 mb-8">Welkom bij je winkelwagen</h1>
 
 </body>
 </html>

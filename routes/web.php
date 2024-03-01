@@ -20,6 +20,9 @@ Route::get('/home', function () {
     return view('homepagina');
 });
 
+Route::get('/store', function () {
+    return view('winkelwagen');
+});
 
 Route::get('/understructure', function () {
     return view('understructure');
