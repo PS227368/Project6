@@ -49,8 +49,7 @@
         <form class="filter-form mt-8 mb-12" action="{{ url('/index') }}" method="GET">
             <label for="name" class="mr-2">Filter by Name:</label>
             <input type="text" name="name" id="name" value="{{ request('name') }}" class="border rounded py-2 px-4">
-            <button type="submit" class="btn btn-primary ml-2">Filter</button>
-            
+            <button type="submit" class="btn btn-primary ml-2">Filter</button>          
         </form>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             @foreach($products as $product)
