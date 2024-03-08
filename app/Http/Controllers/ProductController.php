@@ -34,4 +34,17 @@ class ProductController extends Controller
         // Return the view for the single product page with the product data
         return view('single-product', compact('product'));
     }
+
+    public function home(Request $request)
+    {
+        $query = Product::query();
+
+        if ($request->has('name')) {
+            $query->where('name', 'like', '%' . $request->input('name') . '%');
+        }
+
+        $products = $query->take(5)->get();
+
+        return view('homepagina', compact('products'));
+    }
 }
