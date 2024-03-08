@@ -1,5 +1,3 @@
-<!-- resources/views/product.blade.php -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,11 +39,24 @@
 
     <h1 class="text-4xl font-bold text-center mt-12 mb-8">Welkom bij je winkelwagen</h1>
 
-
     <div class="mid-container">
-        <h1>test</h1>
+        <table class="table-auto">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">Product</th>
+                    <th class="px-4 py-2">Aantal</th>
+                    <th class="px-4 py-2">Prijs</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border px-4 py-2">Product 1</td>
+                    <td class="border px-4 py-2">5</td>
+                    <td class="border px-4 py-2">€10.00</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-
 
     <div class="mid-container">
         <h2>Vul hieronder je gegevens in:</h2>
