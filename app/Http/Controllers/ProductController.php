@@ -20,4 +20,18 @@ class ProductController extends Controller
 
         return view('index', compact('products'));
     }
+    
+    public function show($id)
+    {
+        // Fetch the product details based on the $id
+        $product = Product::find($id);
+
+        // Check if the product exists
+        if (!$product) {
+            abort(404); // Or handle the error in a way that suits your application
+        }
+
+        // Return the view for the single product page with the product data
+        return view('single-product', compact('product'));
+    }
 }

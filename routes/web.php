@@ -16,6 +16,8 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/index', [ProductController::class, 'index']);
 
+Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
+
 Route::get('/home', function () {
     return view('homepagina');
 });
