@@ -19,7 +19,7 @@
 <body class="bg-gray-100">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-custom">
         <div class="container mx-auto flex justify-between items-center py-2">
-            <a class="navbar-brand p-0" href="#">
+            <a class="navbar-brand p-0" href="home">
                 <img src="LogoNoText.PNG" alt="Logo" class="navbar-logo max-h-10 max-w-40">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
