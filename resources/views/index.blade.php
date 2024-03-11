@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laravel Product Page</title>
 
-    <!-- Make sure Tailwind CSS is loaded after other stylesheets -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-    <!-- Remove the external navbar and index stylesheets -->
     <!-- <link rel="stylesheet" href="{{ asset('css/navbar.css') }}"> -->
-    <!-- <link rel="stylesheet" href="index.css"> -->
+    <link rel="stylesheet" href="index.css">
 
 </head>
 <body class="bg-gray-100">
@@ -43,7 +41,7 @@
         <form class="text-center filter-form mt-8 mb-12" action="{{ url('/index') }}" method="GET">
             <label for="name" class="mr-2">Filter by Name:</label>
             <input type="text" name="name" id="name" value="{{ request('name') }}" class="border rounded py-2 px-4">
-            <button type="submit" class="btn btn-primary ml-2">Filter</button>
+            <button type="submit" class="btn btn-primary ml-2 bg-green-600 border-green-600">Filter</button>
         </form>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -51,7 +49,7 @@
                 <a href="{{ url('/product/'.$product->id) }}" class="product-link">
                     <div class="product-item bg-white rounded-lg shadow-lg p-4">
                         <img src="{{ $product->image }}" alt="{{ $product->name }}" class="img-fluid">
-                        <h3 class="text-xl font-bold my-2 text-green-500 hover:text-dark-green-500 no-underline">{{ $product->name }}</h3>
+                        <h3 class="text-xl font-bold my-2 text-green-500 hover:text-dark-green-500" >{{ $product->name }}</h3>
                         <p class="mb-2 text-green-500 hover:text-dark-green-500">{{ $product->description }}</p>
                         <p class="price text-green-500 hover:text-dark-green-500">€ {{ $product->price }}</p>
                     </div>
