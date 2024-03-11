@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Single Product Page</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="{{ asset('css/navbar.css') }}"> -->
     <link rel="stylesheet" href="index.css">
+    
 </head>
 <body class="bg-gray-100">
 
@@ -42,7 +42,7 @@
             <p class="mb-4">{{ $product->description }}</p>
             <p class="price">{{ $product->price }}</p>
 
-            <a href="{{ url('/index') }}" class="btn btn-primary">Back to Products</a>
+            <a href="{{ url('/index') }}" class="btn btn-primary bg-green-600 border-green-600">Back to Products</a>
         </div>
     </div>
 

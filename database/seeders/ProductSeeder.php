@@ -16,33 +16,33 @@ class ProductSeeder extends Seeder
         // Define sample data for products
         $products = [
             [
-                'name' => 'Product 1',
-                'description' => 'Description for Product 1',
+                'name' => 'Vincent van der Voort',
+                'description' => 'Ik ben een grote man en 3e meest verdiende nederlandse darter en je kunt me kopen maar 19,99',
                 'price' => 19.99,
                 'image' => 'https://r.testifier.nl/Acbs8526SDKI/resizing_type:fill/width:1200/height:675/plain/https%3A%2F%2Fs3-newsifier.ams3.digitaloceanspaces.com%2Fdartsnieuws.com%2Fimages%2F2022-06%2Ftoto-dart-kings-62b59574583d4.jpg'
             ],
             [
-                'name' => 'Product 2',
-                'description' => 'Description for Product 2',
+                'name' => 'Danny Noppert',
+                'description' => 'Ik ben een kleine maar snelle man en kan soms wel eens goed gooien maar soms ook echt kak voor maar 29,99',
                 'price' => 29.99,
                 'image' => 'https://r.testifier.nl/Acbs8526SDKI/resizing_type:fill/width:1200/height:675/plain/https%3A%2F%2Fs3-newsifier.ams3.digitaloceanspaces.com%2Fdartsnieuws.com%2Fimages%2F2022-06%2Ftoto-dart-kings-62b59574583d4.jpg'
             ],
             [
-                'name' => 'Product 3',
-                'description' => 'Description for Product 3',
-                'price' => 39.99,
+                'name' => 'Van Gerwen',
+                'description' => 'Ik ben de beste nederlanse darter en daardoor ook het duurste voor 99,99',
+                'price' => 99.99,
                 'image' => 'https://r.testifier.nl/Acbs8526SDKI/resizing_type:fill/width:1200/height:675/plain/https%3A%2F%2Fs3-newsifier.ams3.digitaloceanspaces.com%2Fdartsnieuws.com%2Fimages%2F2022-06%2Ftoto-dart-kings-62b59574583d4.jpg'
             ],
             [
-                'name' => 'Product 4',
-                'description' => 'Description for Product 4',
-                'price' => 49.99,
+                'name' => 'Dirk van duijvenbode',
+                'description' => 'Ik maak er altijd een festival van als ik op de stage kom en 180 is mijn specialiteit voor maar liefst 29,99',
+                'price' => 29.99,
                 'image' => 'https://r.testifier.nl/Acbs8526SDKI/resizing_type:fill/width:1200/height:675/plain/https%3A%2F%2Fs3-newsifier.ams3.digitaloceanspaces.com%2Fdartsnieuws.com%2Fimages%2F2022-06%2Ftoto-dart-kings-62b59574583d4.jpg'
             ],
             [
-                'name' => 'Product 5',
-                'description' => 'Description for Product 5',
-                'price' => 59.99,
+                'name' => 'Barney',
+                'description' => 'Ik heb de grootste army in het darten en dat is de barney army dus als je mij koopt krijg je heel de army erbij',
+                'price' => 149.99,
                 'image' => 'https://r.testifier.nl/Acbs8526SDKI/resizing_type:fill/width:1200/height:675/plain/https%3A%2F%2Fs3-newsifier.ams3.digitaloceanspaces.com%2Fdartsnieuws.com%2Fimages%2F2022-06%2Ftoto-dart-kings-62b59574583d4.jpg'
             ],
         ];
