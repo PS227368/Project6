@@ -30,12 +30,9 @@
                 <ul class="navbar-nav mr-auto">
                 </ul>
                 <form class="form-inline my-2 my-lg-0 flex justify-end items-center">
-                    <a class="btn btn-contact mr-4" href="/contact">Demo</a>
+                    <a class="btn btn-contact mr-4" href="/contact">Contact</a>
                     <div>
-                        <a class="btn btn-demo mr-2" href="#">Demo 1</a>
-                        <a class="btn btn-demo mr-2" href="#">Demo 2</a>
-                        <a class="btn btn-demo mr-2" href="#">Demo 3</a>
-                        <a class="btn btn-demo" href="#">Demo 4</a>
+                        <a class="btn btn-contact mr-4" href="/index">Product Pagina</a>
                     </div>
                 </form>
             </div>
@@ -53,7 +50,6 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
                 <div class="bg-white rounded-lg shadow-lg p-8">
                     <h2 class="text-2xl font-bold mb-4">Nieuwe producten</h2>
-                    <!-- Product slider for new products -->
                     <div class="swiper-container product-slider">
                         <div class="swiper-wrapper">
                             @foreach($products as $product)
@@ -74,7 +70,6 @@
                 
                 <div class="bg-white rounded-lg shadow-lg p-8">
                     <h2 class="text-2xl font-bold mb-4">Korting collectie</h2>
-                    <!-- Product slider for discounted collection -->
                     <div class="swiper-container product-slider">
                         <div class="swiper-wrapper">
                             @foreach($products as $product)
