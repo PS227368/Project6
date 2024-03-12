@@ -1,0 +1,14 @@
+        /* Fix for Swiper Slider container overflow */
+        .swiper-container {
+            max-width: 100%;
+            max-height: 750px; /* Hier de hoogte van de slider aanpassen */
+            overflow: hidden;
+        }
+        .swiper-slide img {
+            max-width: 100%; /* Zorg ervoor dat afbeeldingen binnen de slider de breedte van de container niet overschrijden */
+            height: auto;
+            width: auto; /* Voeg deze regel toe om te voorkomen dat afbeeldingen worden uitgerekt */
+            max-height: 300px; /* Voeg deze regel toe om de maximale hoogte van de afbeeldingen in te stellen */
+        }
+
+        

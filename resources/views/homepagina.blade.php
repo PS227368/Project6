@@ -7,15 +7,9 @@
     <title>Welkom bij onze webshop</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <style>
-        /* Fix for Swiper Slider container overflow */
-        .swiper-container {
-            overflow: hidden;
-        }
-    </style>
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="homepagina.css" rel="stylesheet">
 </head>
-
 <body class="bg-gray-100">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-custom">
         <div class="container mx-auto flex justify-between items-center py-2">
@@ -95,25 +89,7 @@
                 <p>&copy; 2024 Onze Webshop. Alle rechten voorbehouden.</p>
             </div>
         </footer>
-    
-        <!-- Swiper JS -->
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script>
-            // Initialize Swiper for each product slider
-            var productSliders = document.querySelectorAll('.product-slider');
-    
-            productSliders.forEach(function(slider) {
-                var swiper = new Swiper(slider, {
-                    slidesPerView: 'auto',
-                    spaceBetween: 20,
-                    loop: true,
-                    autoplay: {
-                        delay: 5000, // milliseconds
-                        disableOnInteraction: false,
-                    },
-                });
-            });
-        </script>
+        <script src="{{ asset('js/homepagina.js') }}"></script>
     </body>
-    
 </html>
