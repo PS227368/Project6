@@ -11,7 +11,7 @@
 
     <!-- <link rel="stylesheet" href="{{ asset('css/navbar.css') }}"> -->
     <link rel="stylesheet" href="index.css">
-    
+
 </head>
 <body class="bg-gray-100">
 
@@ -35,14 +35,14 @@
     </div>
 </nav>
 
-    <div class="container mx-auto px-4 my-8">
-        <div class="product-details bg-white rounded-lg shadow-lg p-8">
+    <div class="container mx-auto px-4 my-8 ">
+        <div class="product-details bg-white rounded-lg shadow-lg p-8 w-10/12 m-auto">
             <img src="{{ $product->image }}" alt="{{ $product->name }}" class="img-fluid">
             <h1 class="text-3xl font-bold my-4">{{ $product->name }}</h1>
             <p class="mb-4">{{ $product->description }}</p>
             <p class="price">{{ $product->price }}</p>
 
-            <a href="{{ url('/index') }}" class="btn btn-primary bg-green-600 border-green-600">Back to Products</a>
+            <a href="{{ url('/index') }}" class="btn btn-primary bg-green-600 border-green-600 hover:bg-green-800 hover:bg-green-800">Back to Products</a>
         </div>
     </div>
 
