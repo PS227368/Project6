@@ -18,9 +18,8 @@ Route::get('/index', [ProductController::class, 'index']);
 
 Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
 
-// Route::get('/home', function () {
-//     return view('homepagina');
-// });
+Route::get('/', [ProductController::class, 'home']);
+
 Route::get('/home', [ProductController::class, 'home']);
 
 
@@ -38,8 +37,6 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::view('/', 'welcome');
-
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
@@ -48,4 +45,4 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
