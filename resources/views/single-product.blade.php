@@ -35,19 +35,16 @@
     </div>
 </nav>
 
-<div class="container mx-auto px-4 my-8 flex bg-white rounded-lg shadow-lg">
-    <div class="product-details p-8 w-1/2">
-        <h1 class="text-3xl font-bold my-4">{{ $product->name }}</h1>
-        <p class="mb-4">{{ $product->description }}</p>
-        <p class="price">{{ $product->price }}</p>
-        <a href="{{ url('/index') }}" class="btn btn-primary bg-green-600 border-green-600 hover:bg-green-800 hover:bg-green-800">Back to Products</a>
-    </div>
-    <div class="w-1/2">
-        <img src="{{ $product->image }}" alt="{{ $product->name }}" class="img-fluid object-cover object-center">
-    </div>
-</div>
+    <div class="container mx-auto px-4 my-8 ">
+        <div class="product-details bg-white rounded-lg shadow-lg p-8 w-10/12 m-auto">
+            <img src="{{ $product->image }}" alt="{{ $product->name }}" class="img-fluid h-80">
+            <h1 class="text-3xl font-bold my-4">{{ $product->name }}</h1>
+            <p class="mb-4">{{ $product->description }}</p>
+            <p class="price">{{ $product->price }}</p>
 
-
+            <a href="{{ url('/index') }}" class="btn btn-primary bg-green-600 border-green-600 hover:bg-green-800 hover:bg-green-800">Back to Products</a>
+        </div>
+    </div>
 
 </body>
 </html>
