@@ -40,7 +40,8 @@
             <img src="{{ $product->image }}" alt="{{ $product->name }}" class="img-fluid h-80">
             <h1 class="text-3xl font-bold my-4">{{ $product->name }}</h1>
             <p class="mb-4">{{ $product->description }}</p>
-            <p class="price">{{ $product->price }}</p>
+            <p class="price">€  {{ $product->price }}</p>
+            <p class="Aantal">Beschikbaar aantal: {{ $product->quantity }}</p>
 
             <a href="{{ url('/index') }}" class="btn btn-primary bg-green-600 border-green-600 hover:bg-green-800 hover:bg-green-800">Back to Products</a>
         </div>

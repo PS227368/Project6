@@ -16,8 +16,9 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->decimal('price', 8, 2);
+            $table->integer('quantity')->default(mt_rand(0, 300));
             $table->timestamps();
-        });
+        });    
     }
 
     public function down()
