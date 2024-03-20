@@ -19,9 +19,6 @@
                     <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Productpagina</a>
                     <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Winkelwagen</a>
                 </div>
-                <div class="flex space-x-4">
-                    <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Contact</a>
-                </div>
             </div>
         </div>
     </nav>
