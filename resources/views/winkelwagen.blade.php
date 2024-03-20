@@ -73,6 +73,10 @@
                     <input type="email" class="form-control" id="email" placeholder="Voer uw e-mailadres in">
                 </div>
                 <div class="form-group">
+                    <label for="nummer">Telefoonnummer:</label>
+                    <input type="nummer" class="form-control" id="nummer" placeholder="Voer uw telefoonnummer in">
+                </div>
+                <div class="form-group">
                     <label for="adres">Adres:</label>
                     <input type="text" class="form-control" id="adres" placeholder="Voer uw adres in">
                 </div>
