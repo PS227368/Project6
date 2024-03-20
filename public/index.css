@@ -4,3 +4,14 @@ a {
 a:hover {
     color: darkgreen;
 }
+
+.desc_css {
+    overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 4; /* number of lines to show */
+           line-clamp: 4; 
+   -webkit-box-orient: vertical;
+}
+.start-body {
+    margin-top: 6rem;
+}

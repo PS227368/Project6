@@ -23,8 +23,6 @@ Route::get('/', [ProductController::class, 'home']);
 Route::get('/home', [ProductController::class, 'home']);
 
 
-
-
 Route::get('/store', function () {
     return view('winkelwagen');
 });

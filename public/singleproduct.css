@@ -1,0 +1,12 @@
+.start-body {
+    margin-top: 6rem;
+}
+
+.block-content ul li {
+    float: left;
+    width: auto;
+    line-height: 60px;
+    background: url(/website/default/images/bg_usp.png) left center no-repeat;
+    margin: 0 15px;
+    padding-left: 20px;
+}

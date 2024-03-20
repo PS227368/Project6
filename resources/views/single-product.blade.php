@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- <link rel="stylesheet" href="{{ asset('css/navbar.css') }}"> -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="singleproduct.css">
 
 </head>
 <body class="bg-gray-100">
@@ -34,17 +34,26 @@
         </form>
     </div>
 </nav>
+<div class="start-body">
+    <div class="block-content">
+        <ul>
+            <li>Voor het beste <a href="https://www.tuincentrumkolbach.nl/klantenservice"><strong>groen advies</strong></a></li>
+            <li><a href="https://www.tuincentrumkolbach.nl/klantenservice"><strong>Snelle levering</strong></a>in eigen regio</li>
+            <li><a href="https://www.tuincentrumkolbach.nl/klantenservice"><strong>14 dagen retourrecht</strong></a>op moment van ontvangst</li>
+            <li>Over ons <a href="https://www.tuincentrumkolbach.nl/over-ons"><strong>tuincentrum</strong></a></li>
+        </ul>
+    </div>
 
     <div class="container mx-auto px-4 my-8 ">
         <div class="product-details bg-white rounded-lg shadow-lg p-8 w-10/12 m-auto">
             <img src="{{ $product->image }}" alt="{{ $product->name }}" class="img-fluid h-80">
             <h1 class="text-3xl font-bold my-4">{{ $product->name }}</h1>
             <p class="mb-4">{{ $product->description }}</p>
-            <p class="price">{{ $product->price }}</p>
+            <p class="price">€ {{ $product->price }}</p>
 
-            <a href="{{ url('/index') }}" class="btn btn-primary bg-green-600 border-green-600 hover:bg-green-800 hover:bg-green-800">Back to Products</a>
+            <a href="{{ url('/index') }}" class="btn btn-primary bg-green-600 border-green-600 hover:bg-green-800">Back to Products</a>
         </div>
     </div>
-
+</div>
 </body>
 </html>

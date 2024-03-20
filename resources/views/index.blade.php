@@ -35,13 +35,13 @@
         </div>
     </nav>
 
-    <h1 class="text-4xl font-bold text-center mt-12 mb-8">Welkom op onze productpagina</h1>
+    <h1 class="text-4xl font-bold text-center mt-12 mb-8 start-body">Welkom op onze productpagina</h1>
 
     <div class="container mx-auto px-4">
         <form class="text-center filter-form mt-8 mb-12" action="{{ url('/index') }}" method="GET">
             <label for="name" class="mr-2">Filter by Name:</label>
             <input type="text" name="name" id="name" value="{{ request('name') }}" class="border rounded py-2 px-4">
-            <button type="submit" class="btn btn-primary ml-2 bg-green-600 border-green-600 hover:bg-green-800 hover:bg-green-800">Filter</button>
+            <button type="submit" class="btn btn-primary ml-2 bg-green-600 border-green-600 hover:bg-green-800">Filter</button>
         </form>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -50,7 +50,7 @@
                     <div class="product-item bg-white rounded-lg shadow-lg p-4">
                         <img src="{{ $product->image }}" alt="{{ $product->name }}" class="img-fluid h-96 m-auto">
                         <h3 class="text-xl font-bold my-2 text-black hover:text-neutral-800" >{{ $product->name }}</h3>
-                        <p class="mb-2 text-black hover:text-neutral-800 line-clamp-2" >{{ $product->description }}</p>
+                        <p class="mb-2 text-black hover:text-neutral-800 desc_css" >{{ $product->description }}</p>
                         <p class="price text-black hover:text-neutral-800">€ {{ $product->price }}</p>
                     </div>
                 </a>
