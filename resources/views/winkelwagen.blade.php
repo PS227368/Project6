@@ -59,6 +59,10 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="land">Land:</label>
+                            <input type="text" class="form-control" id="land" placeholder="Voer uw land in">
+                        </div>
+                        <div class="form-group">
                             <label for="adres">Adres:</label>
                             <input type="text" class="form-control" id="adres" placeholder="Voer uw adres in">
                         </div>
@@ -69,10 +73,6 @@
                         <div class="form-group">
                             <label for="woonplaats">Woonplaats:</label>
                             <input type="text" class="form-control" id="woonplaats" placeholder="Voer uw woonplaats in">
-                        </div>
-                        <div class="form-group">
-                            <label for="land">Land:</label>
-                            <input type="text" class="form-control" id="land" placeholder="Voer uw land in">
                         </div>
                     </div>
                 </div>
