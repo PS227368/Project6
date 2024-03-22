@@ -68,12 +68,20 @@ public function updateQuantity(Request $request, $id)
 
 
     // Methode om een product uit de winkelmand te verwijderen
-    public function removeFromCart(Request $request)
+    public function removeFromCart($id)
     {
-        // Hier kun je de logica implementeren om een product uit de winkelmand te verwijderen
-        // Bijvoorbeeld, controleren of het product in de winkelmand zit, het product verwijderen, etc.
-
-        // Voor nu verwijderen we het product gewoon uit de winkelmand en sturen we een bericht terug
+        // Zoek het item in de winkelmand op basis van het ID
+        $cartItem = CartItem::find($id);
+    
+        // Controleer of het item bestaat
+        if (!$cartItem) {
+            return response()->json(['message' => 'Product niet gevonden in de winkelmand.'], 404);
+        }
+    
+        // Verwijder het item uit de winkelmand
+        $cartItem->delete();
+    
+        // Geef een succesbericht terug naar de gebruiker
         return response()->json(['message' => 'Product is succesvol verwijderd uit de winkelmand.']);
     }
 }

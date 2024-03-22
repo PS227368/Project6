@@ -30,11 +30,10 @@ Route::get('/product/{id}', [apiController::class, 'getProduct']);
 
 
     Route::get('/winkelmand', [ShoppingCartController::class, 'showCart'])->name('cart.show');
-
     Route::get('/add-to-cart/{id}', [ShoppingCartController::class, 'addToCart'])->name('cart.add');
     Route::put('/update-quantity/{id}', [ShoppingCartController::class, 'updateQuantity'])->name('cart.updateQuantity');
-
-
+    Route::delete('/remove-from-cart/{id}', [ShoppingCartController::class, 'removeFromCart'])->name('cart.remove');
+    
     Route::get('/understructure', function () {
         return view('understructure');
     });
