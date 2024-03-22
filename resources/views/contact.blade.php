@@ -17,7 +17,7 @@
                     </a>
                     <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Home</a>
                     <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Productpagina</a>
-                    <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Winkelwagen</a>
+                    <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Checkout</a>
                 </div>
             </div>
         </div>

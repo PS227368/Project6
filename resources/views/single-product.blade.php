@@ -30,7 +30,7 @@
         <form class="form-inline my-2 my-lg-0">
             <a class="btn btn-contact my-2 my-sm-0" href="/understructure">Home</a>
             <a class="btn btn-contact my-2 my-sm-0" href="/contact">Contactpagina</a>
-            <a class="btn btn-contact my-2 my-sm-0" href="/store">Winkelwagen</a>
+            <a class="btn btn-contact my-2 my-sm-0" href="/checkout">Checkout</a>
         </form>
     </div>
 </nav>
