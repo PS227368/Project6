@@ -30,6 +30,8 @@ Route::get('/checkout', function () {
 
 Route::get('/winkelmand', [ShoppingCartController::class, 'showCart'])->name('cart.show');
 
+Route::get('/add-to-cart/{id}', [ShoppingCartController::class, 'addToCart'])->name('cart.add');
+
 
 Route::get('/understructure', function () {
     return view('understructure');
