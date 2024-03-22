@@ -45,7 +45,7 @@
                     <p class="text-lg font-medium text-gray-900">{{ $item->product->name }}</p>
                     <p class="text-sm text-gray-500">Prijs per stuk: €{{ $item->product->price }}</p>
                     <form class="quantity-form" data-id="{{ $item->id }}" onsubmit="return false;">
-                        <input class="text-sm text-gray-500 quantity-input" id="quantity_{{ $item->id }}" type="number" name="quantity" value="{{ $item->quantity }}" min="1" data-id="{{ $item->id }}" data-price="{{ $item->product->price }}" onchange="updateQuantity(this)">
+                        <input class="text-sm text-gray-500 quantity-input" id="quantity_{{ $item->id }}" type="number" min="1" name="quantity" value="{{ $item->quantity }}" min="1" data-id="{{ $item->id }}" data-price="{{ $item->product->price }}" onchange="updateQuantity(this)">
                         <p id="totalPrice_{{ $item->id }}">Totaal: €{{ $item->product->price * $item->quantity }}</p>
                         <button class="btn btn-danger" onclick="removeFromCart({{ $item->id }})">Verwijder</button>
                     </form>
@@ -67,7 +67,7 @@
     function updateQuantity(input) {
         var itemId = input.getAttribute('data-id');
         var newQuantity = input.value;
-
+        
         $.ajax({
             url: '/update-quantity/' + itemId,
             type: 'PUT',
@@ -85,6 +85,53 @@
         });
     }
 </script>
+
+<script>
+    // Functie om de totale prijs bij te werken wanneer de hoeveelheid verandert
+    function updateTotalPrice(itemId) {
+        var quantityInput = document.getElementById('quantity_' + itemId);
+        var pricePerItem = parseFloat(quantityInput.getAttribute('data-price'));
+        var newQuantity = parseInt(quantityInput.value);
+        var totalPriceElement = document.getElementById('totalPrice_' + itemId);
+
+        // Bereken de nieuwe totale prijs
+        var newTotalPrice = pricePerItem * newQuantity;
+
+        // Werk de totale prijs bij op de pagina
+        totalPriceElement.innerText = 'Totaal: €' + newTotalPrice.toFixed(2);
+    }
+
+    // Voeg een event listener toe aan alle hoeveelheidsinvoeren
+    var quantityInputs = document.querySelectorAll('.quantity-input');
+    quantityInputs.forEach(function(input) {
+        input.addEventListener('change', function() {
+            var itemId = this.getAttribute('data-id');
+            updateTotalPrice(itemId);
+        });
+    });
+</script>
+
+<script>
+    function removeFromCart(itemId) {
+        $.ajax({
+            url: '/remove-from-cart/' + itemId,
+            type: 'DELETE',
+            data: {
+                _token: $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(response) {
+                // Voer hier eventuele andere acties uit die je wilt uitvoeren na het verwijderen van het item
+                // Bijvoorbeeld het bijwerken van de winkelmandweergave
+                location.reload(); // Herlaad de pagina om de bijgewerkte winkelmand weer te geven
+            },
+            error: function(xhr, status, error) {
+                console.error(xhr.responseText);
+                alert('Er is een fout opgetreden bij het verwijderen van het item uit de winkelmand.');
+            }
+        });
+    }
+</script>
+
 
 </body>
 </html>
