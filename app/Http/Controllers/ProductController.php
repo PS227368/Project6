@@ -9,17 +9,18 @@ use App\Models\Product;
 class ProductController extends Controller
 {
     public function index(Request $request)
-    {
-        $query = Product::query();
+{
+    $query = Product::query();
 
-        if ($request->has('name')) {
-            $query->where('name', 'like', '%' . $request->input('name') . '%');
-        }
-
-        $products = $query->take(5)->get();
-
-        return view('index', compact('products'));
+    if ($request->has('query')) {
+        $query->where('name', 'like', '%' . $request->input('query') . '%')
+              ->orWhere('description', 'like', '%' . $request->input('query') . '%');
     }
+
+    $products = $query->take(5)->get();
+
+    return view('index', compact('products'));
+}
     
     public function show($id)
     {
