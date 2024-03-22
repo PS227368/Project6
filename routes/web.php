@@ -23,8 +23,8 @@ Route::get('/', [ProductController::class, 'home']);
 Route::get('/home', [ProductController::class, 'home']);
 
 
-Route::get('/store', function () {
-    return view('winkelwagen');
+Route::get('/checkout', function () {
+    return view('checkout');
 });
 
 Route::get('/understructure', function () {
