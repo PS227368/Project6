@@ -44,18 +44,19 @@
         <button type="submit" class="btn btn-primary ml-2 bg-green-600 border-green-600 hover:bg-green-800">Filter</button>
     </form>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            @foreach($products as $product)
-                <a href="{{ url('/product/'.$product->id) }}" class="product-link">
-                    <div class="product-item bg-white rounded-lg shadow-lg p-4">
-                        <img src="{{ $product->image }}" alt="{{ $product->name }}" class="img-fluid h-96 m-auto">
-                        <h3 class="text-xl font-bold my-2 text-black hover:text-neutral-800" >{{ $product->name }}</h3>
-                        <p class="mb-2 text-black hover:text-neutral-800 desc_css" >{{ $product->description }}</p>
-                        <p class="price text-black hover:text-neutral-800">€ {{ $product->price }}</p>
-                    </div>
-                </a>
-            @endforeach
-        </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    @foreach($products as $product)
+        <a href="{{ url('/product/'.$product['id']) }}" class="product-link">
+            <div class="product-item bg-white rounded-lg shadow-lg p-4">
+                <img src="{{ $product['image'] }}" alt="{{ $product['name'] }}" class="img-fluid h-96 m-auto">
+                <h3 class="text-xl font-bold my-2 text-black hover:text-neutral-800" >{{ $product['name'] }}</h3>
+                <p class="mb-2 text-black hover:text-neutral-800 desc_css" >{{ $product['description'] }}</p>
+                <p class="price text-black hover:text-neutral-800">€ {{ $product['price'] }}</p>
+            </div>
+        </a>
+    @endforeach
+</div>
+
     </div>
 
 </body>

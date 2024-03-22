@@ -1,8 +1,9 @@
     <?php
 
-    use Illuminate\Support\Facades\Route;
-    use App\Http\Controllers\ProductController;
-    use App\Http\Controllers\ShoppingCartController;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ShoppingCartController;
+use App\Http\Controllers\apiController;
 
     /*
     |--------------------------------------------------------------------------
@@ -14,9 +15,9 @@
     | be assigned to the "web" middleware group. Make something great!
     */
 
-    Route::get('/index', [ProductController::class, 'index']);
+Route::get('/index', [apiController::class, 'getProductList']);
 
-    Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
+Route::get('/product/{id}', [apiController::class, 'getProduct']);
 
     Route::get('/', [ProductController::class, 'home']);
 
