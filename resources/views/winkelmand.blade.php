@@ -28,6 +28,7 @@
         </div>
         <div class="mt-8">
             <p class="text-lg font-semibold">Totaal: €{{ $totalPrice }}</p>
+            <br>
             <a href="{{ url('/checkout') }}" class="mt-4 px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-800">Afrekenen</a>
         </div>
     </div>

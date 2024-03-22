@@ -28,14 +28,25 @@ class ShoppingCartController extends Controller
     }
 
     // Methode om een product aan de winkelmand toe te voegen
-    public function addToCart(Request $request)
-    {
-        // Hier kun je de logica implementeren om een product aan de winkelmand toe te voegen
-        // Bijvoorbeeld, validatie van de invoer, controleren of het product al in de winkelmand zit, etc.
+    public function addToCart($id)
+{
+    // Zoek het product op basis van het productId dat is verzonden via het verzoek
+    $product = Product::find($id);
 
-        // Voor nu voegen we het product gewoon toe aan de winkelmand en sturen we een bericht terug
-        return response()->json(['message' => 'Product is succesvol toegevoegd aan de winkelmand.']);
+    // Controleer of het product bestaat
+    if (!$product) {
+        return response()->json(['message' => 'Product niet gevonden.'], 404);
     }
+
+    // Voeg het product toe aan de winkelmand
+    CartItem::create([
+        'product_id' => $product->id,
+        'quantity' => 1, // Of de gewenste hoeveelheid
+    ]);
+
+    // Geef een succesbericht terug naar de gebruiker
+    return response()->json(['message' => 'Product is succesvol toegevoegd aan de winkelmand.']);
+}
 
     // Methode om een product uit de winkelmand te verwijderen
     public function removeFromCart(Request $request)
