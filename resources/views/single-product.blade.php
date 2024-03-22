@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-    <!-- <link rel="stylesheet" href="{{ asset('css/navbar.css') }}"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="singleproduct.css">
 
 </head>
@@ -31,6 +30,7 @@
             <a class="btn btn-contact my-2 my-sm-0" href="/understructure">Home</a>
             <a class="btn btn-contact my-2 my-sm-0" href="/contact">Contactpagina</a>
             <a class="btn btn-contact my-2 my-sm-0" href="/winkelmand">Winkelwagen</a>
+            <a class="btn btn-contact my-2 my-sm-0" href="/checkout">Checkout</a>
         </form>
     </div>
 </nav>
@@ -56,14 +56,25 @@
 
         </div>
     </div>
-    <script>
-        function addToCart($name) {
-            // Voer hier de logica uit om het product aan de winkelwagen toe te voegen
-            // Je kunt bijvoorbeeld een AJAX-verzoek maken naar de server om het product aan de winkelwagen toe te voegen
-            // Hieronder is een voorbeeld van hoe je een eenvoudig alertbericht kunt weergeven wanneer de knop wordt geklikt
-            alert('Product met ID ' + $name+ ' is toegevoegd aan de winkelwagen.');
-        }
-    </script>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function addToCart(productId) {
+        $.ajax({
+            url: '/add-to-cart/' + productId,
+            type: 'GET',
+            success: function(response) {
+                alert('Product is toegevoegd aan de winkelwagen.');
+                // Voer hier eventuele andere acties uit die je wilt uitvoeren na het toevoegen van het product aan de winkelwagen
+            },
+            error: function(xhr, status, error) {
+                console.error(xhr.responseText);
+                alert('Er is een fout opgetreden bij het toevoegen van het product aan de winkelwagen.');
+            }
+        });
+    }
+</script>
+
 </body>
 </html>
