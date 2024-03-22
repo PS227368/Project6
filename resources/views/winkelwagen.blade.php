@@ -30,7 +30,7 @@
                 <!--Zorgt voor de wit space-->
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <a class="btn btn-contact my-2 my-sm-0" href="/understructure">Home</a>
+                <a class="btn btn-contact my-2 my-sm-0" href="/home">Home</a>
                 <a class="btn btn-contact my-2 my-sm-0" href="/index">Productpagina</a>
                 <a class="btn btn-contact my-2 my-sm-0" href="/contact">Contactpagina</a>
             </form>
@@ -39,64 +39,70 @@
 
     <h1 class="text-4xl font-bold text-center mt-12 mb-8">Welkom bij je winkelwagen</h1>
 
-    <div class="mid-container">
-        <table class="table-auto">
-            <thead>
-                <tr>
-                    <th class="px-4 py-2">Product</th>
-                    <th class="px-4 py-2">Aantal</th>
-                    <th class="px-4 py-2">Prijs</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="border px-4 py-2">Product 1</td>
-                    <td class="border px-4 py-2">5</td>
-                    <td class="border px-4 py-2">€10.00</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div class="mid-container">
+    <div class="container mt-10">
         <h2>Vul hieronder je gegevens in:</h2>
-    </div>
-    <div>
-        <div class="container mt-10">
             <form>
-                <div class="form-group">
-                    <label for="naam">Naam:</label>
-                    <input type="text" class="form-control" id="naam" placeholder="Voer uw naam in">
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Voer uw e-mailadres in">
-                </div>
-                <div class="form-group">
-                    <label for="nummer">Telefoonnummer:</label>
-                    <input type="nummer" class="form-control" id="nummer" placeholder="Voer uw telefoonnummer in">
-                </div>
-                <div class="form-group">
-                    <label for="adres">Adres:</label>
-                    <input type="text" class="form-control" id="adres" placeholder="Voer uw adres in">
-                </div>
-                <div class="form-group">
-                    <label for="postcode">Postcode:</label>
-                    <input type="text" class="form-control" id="postcode" placeholder="Voer uw postcode in">
-                </div>
-                <div class="form-group">
-                    <label for="woonplaats">Woonplaats:</label>
-                    <input type="text" class="form-control" id="woonplaats" placeholder="Voer uw woonplaats in">
-                </div>
-                <div class="form-group">
-                    <label for="land">Land:</label>
-                    <input type="text" class="form-control" id="land" placeholder="Voer uw land in">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="naam">Naam:</label>
+                            <input type="text" class="form-control" id="naam" placeholder="Voer uw naam in">
+                        </div>
+                        <div class="form-group row">
+                            <div class="col">
+                                <label for="email">E-mail:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Voer uw e-mailadres in">
+                            </div>
+                            <div class="col">
+                                <label for="nummer">Telefoonnummer:</label>
+                                <input type="number" class="form-control" id="nummer" placeholder="Voer uw telefoonnummer in">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="adres">Adres:</label>
+                            <input type="text" class="form-control" id="adres" placeholder="Voer uw adres in">
+                        </div>
+                        <div class="form-group">
+                            <label for="postcode">Postcode:</label>
+                            <input type="text" class="form-control" id="postcode" placeholder="Voer uw postcode in">
+                        </div>
+                        <div class="form-group">
+                            <label for="woonplaats">Woonplaats:</label>
+                            <input type="text" class="form-control" id="woonplaats" placeholder="Voer uw woonplaats in">
+                        </div>
+                        <div class="form-group">
+                            <label for="land">Land:</label>
+                            <input type="text" class="form-control" id="land" placeholder="Voer uw land in">
+                        </div>
+                    </div>
                 </div>
             </form>
+    </div>
+    <br>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Winkelwagen Samenvatting
+            </div>
+            <div class="card-body">
+                <!-- Voeg hier de inhoud van de winkelwagen toe -->
+                <ul class="list-group">
+                    <li class="list-group-item">Product 1 - €10.00</li>
+                    <!-- Voeg hier andere producten toe -->
+                </ul>
+                <hr>
+                <p>Totaal: €10.00</p>
+                <p>Bezorgkosten: Gratis</p>
+                <hr>
+                <button type="button" class="btn btn-success btn-block">Bestellen</button>
+            </div>
         </div>
     </div>
-    <div class="mid-container">
-        <button type="submit" class="btn btn-primary" id="btn">Afrekenen</button>
-    </div>
 </body>
+<br>
+<footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2024 Onze Webshop. Alle rechten voorbehouden.</p>
+    </div>
+</footer>
 </html>
