@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ShoppingCartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,7 +12,6 @@ use App\Http\Controllers\ProductController;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
-|
 */
 
 Route::get('/index', [ProductController::class, 'index']);
@@ -26,6 +26,10 @@ Route::get('/home', [ProductController::class, 'home']);
 Route::get('/store', function () {
     return view('winkelwagen');
 });
+
+
+Route::get('/winkelmand', [ShoppingCartController::class, 'showCart'])->name('cart.show');
+
 
 Route::get('/understructure', function () {
     return view('understructure');

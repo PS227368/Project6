@@ -30,7 +30,7 @@
         <form class="form-inline my-2 my-lg-0">
             <a class="btn btn-contact my-2 my-sm-0" href="/understructure">Home</a>
             <a class="btn btn-contact my-2 my-sm-0" href="/contact">Contactpagina</a>
-            <a class="btn btn-contact my-2 my-sm-0" href="/store">Winkelwagen</a>
+            <a class="btn btn-contact my-2 my-sm-0" href="/winkelmand">Winkelwagen</a>
         </form>
     </div>
 </nav>
@@ -52,8 +52,18 @@
             <p class="price">€ {{ $product->price }}</p>
             <p class="Aantal">Beschikbaar aantal: {{ $product->quantity }}</p>
             <a href="{{ url('/index') }}" class="btn btn-primary bg-green-600 border-green-600 hover:bg-green-800">Back to Products</a>
+            <button class="btn btn-primary bg-blue-600 border-blue-600 hover:bg-blue-800" onclick="addToCart({{ $product->id }})">Voeg toe aan winkelwagen</button>
+
         </div>
     </div>
+    <script>
+        function addToCart($name) {
+            // Voer hier de logica uit om het product aan de winkelwagen toe te voegen
+            // Je kunt bijvoorbeeld een AJAX-verzoek maken naar de server om het product aan de winkelwagen toe te voegen
+            // Hieronder is een voorbeeld van hoe je een eenvoudig alertbericht kunt weergeven wanneer de knop wordt geklikt
+            alert('Product met ID ' + $name+ ' is toegevoegd aan de winkelwagen.');
+        }
+    </script>
 </div>
 </body>
 </html>
