@@ -48,6 +48,25 @@ class ShoppingCartController extends Controller
     return response()->json(['message' => 'Product is succesvol toegevoegd aan de winkelmand.']);
 }
 
+public function updateQuantity(Request $request, $id)
+{
+    // Zoek het item in de winkelmand op basis van het ID
+    $cartItem = CartItem::find($id);
+
+    // Controleer of het item bestaat
+    if (!$cartItem) {
+        return response()->json(['message' => 'Product niet gevonden in de winkelmand.'], 404);
+    }
+
+    // Update de hoeveelheid van het item
+    $cartItem->quantity = $request->input('quantity');
+    $cartItem->save();
+
+    // Geef een succesbericht terug naar de gebruiker
+    return response()->json(['message' => 'Hoeveelheid is succesvol bijgewerkt.']);
+}
+
+
     // Methode om een product uit de winkelmand te verwijderen
     public function removeFromCart(Request $request)
     {
