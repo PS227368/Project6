@@ -37,7 +37,7 @@
         </div>
     </nav>
 
-    <h1 class="text-4xl font-bold text-center mt-12 mb-8">Welkom bij je winkelwagen</h1>
+    <h1 class="text-4xl font-bold text-center mt-12">Welkom bij je winkelwagen</h1>
 
     <div class="container mt-10">
         <h2>Vul hieronder je gegevens in:</h2>
