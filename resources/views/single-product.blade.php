@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="singleproduct.css">
 
 </head>
@@ -34,24 +35,14 @@
     </div>
 </nav>
 <div class="start-body">
-    <div class="block-content">
-        <ul>
-            <li>Voor het beste <a href="https://www.tuincentrumkolbach.nl/klantenservice"><strong>groen advies</strong></a></li>
-            <li><a href="https://www.tuincentrumkolbach.nl/klantenservice"><strong>Snelle levering</strong></a>in eigen regio</li>
-            <li><a href="https://www.tuincentrumkolbach.nl/klantenservice"><strong>14 dagen retourrecht</strong></a>op moment van ontvangst</li>
-            <li>Over ons <a href="https://www.tuincentrumkolbach.nl/over-ons"><strong>tuincentrum</strong></a></li>
-        </ul>
-    </div>
-
     <div class="container mx-auto px-4 my-8 ">
         <div class="product-details bg-white rounded-lg shadow-lg p-8 w-10/12 m-auto">
-            <img src="{{ $product->image }}" alt="{{ $product->name }}" class="img-fluid h-80">
-            <h1 class="text-3xl font-bold my-4">{{ $product->name }}</h1>
-            <p class="mb-4">{{ $product->description }}</p>
-            <p class="price">€ {{ $product->price }}</p>
-            <p class="Aantal">Beschikbaar aantal: {{ $product->quantity }}</p>
+            <img src="{{ $product['image'] }}" alt="{{ $product['name'] }}" class="img-fluid h-80">
+            <h1 class="text-3xl font-bold my-4">{{ $product['name'] }}</h1>
+            <p class="mb-4">{{ $product['description'] }}</p>
+            <p class="price">€ {{ $product['price'] }}</p>
             <a href="{{ url('/index') }}" class="btn btn-primary bg-green-600 border-green-600 hover:bg-green-800">Back to Products</a>
-            <button class="btn btn-primary bg-blue-600 border-blue-600 hover:bg-blue-800" onclick="addToCart({{ $product->id }})">Voeg toe aan winkelwagen</button>
+            <button class="btn btn-primary bg-blue-600 border-blue-600 hover:bg-blue-800" onclick="addToCart({{ $product['id'] }})">Voeg toe aan winkelwagen</button>
 
         </div>
     </div>
@@ -65,7 +56,6 @@
             type: 'GET',
             success: function(response) {
                 alert('Product is toegevoegd aan de winkelwagen.');
-                // Voer hier eventuele andere acties uit die je wilt uitvoeren na het toevoegen van het product aan de winkelwagen
             },
             error: function(xhr, status, error) {
                 console.error(xhr.responseText);
@@ -74,5 +64,6 @@
         });
     }
 </script>
+
 </body>
 </html>

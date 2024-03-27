@@ -43,6 +43,29 @@
         <input type="text" name="query" id="query" value="{{ request('query') }}" class="border rounded py-2 px-4 mr-2">
         <button type="submit" class="btn btn-primary ml-2 bg-green-600 border-green-600 hover:bg-green-800">Filter</button>
     </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+$(document).ready(function() {
+    $('.filter-form').submit(function(event) {
+        event.preventDefault();
+
+        var query = $('#query').val();
+
+        $.ajax({
+            url: '/api/searchProduct',
+            type: 'GET',
+            data: { query: query },
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
+            }
+        });
+    });
+});
+
+    </script>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
     @foreach($products as $product)

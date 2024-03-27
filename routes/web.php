@@ -17,7 +17,10 @@ use App\Http\Controllers\apiController;
 
 Route::get('/index', [apiController::class, 'getProductList']);
 
-Route::get('/product/{id}', [apiController::class, 'getProduct']);
+Route::get('/product/{product}', [apiController::class, 'getProduct']);
+
+Route::get('/products/search' , [apiController::class, 'searchProduct']);
+
 
     Route::get('/', [ProductController::class, 'home']);
 

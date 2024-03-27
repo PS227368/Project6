@@ -12,7 +12,7 @@ class KuinApiService
     {
         $this->client = new Client([
             'base_uri' => 'https://kuin.summaict.nl/api/',
-            'timeout'  => 5, // timeout in seconds
+            'timeout'  => 5, // In secondes
         ]);
     }
 
